@@ -1,0 +1,392 @@
+:root {
+  --primary: #f3f1ed;
+  --secondary: #545454;
+  --tertiary: #b9aea6;
+  --main-text: #222;
+  --background: #fff;
+}
+
+/* Main Structure */
+
+/* TODO Make Responsive */
+
+html {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  color: var(--main-text);
+  scroll-behavior: smooth;
+}
+
+.background::after {
+  content: "";
+  background: linear-gradient(
+      rgba(243, 225, 194, 0.1),
+      rgba(243, 225, 194, 0.1)
+    ),
+    url("lib/mountains2.jpg");
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: cover no-repeat;
+  z-index: -1;
+  background-attachment: fixed;
+  margin-top: -10px;
+  background-color: #999;
+}
+
+.center-column {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 10px 0px;
+}
+
+header,
+footer,
+section {
+  box-sizing: border-box;
+  margin: 10px 0px;
+  padding: 22px 50px;
+  width: 100%;
+  background-color: var(--background);
+  border-radius: 5px;
+  box-shadow: 0px 3px 15px 0px rgba(64, 63, 63, 0.06);
+}
+
+header {
+  height: 80px;
+}
+
+.title {
+  height: 570px;
+}
+
+.second-section,
+.third-section {
+  height: auto;
+}
+
+footer {
+  height: 130px;
+}
+
+h3 {
+  padding-top: 0px;
+  margin: 0 auto 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.55em;
+  color: #545454;
+}
+
+.second-section__underline,
+.third-section__underline,
+.footer__underline {
+  height: 1px;
+  width: 60px;
+  margin: 5px auto 20px;
+  background-color: #ccc;
+  border-top: solid 1px var(--secondary);
+}
+
+/* Component - Icon Links */
+
+.fa-stack {
+  margin: 0px 7px;
+}
+
+.fa--color-black {
+  color: var(--secondary);
+}
+
+a.fa {
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: white;
+  text-decoration: none;
+}
+
+a.fa:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+i {
+  padding-right: 5px;
+}
+
+/* Header Bar */
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  font-size: 24px;
+}
+
+.header__title {
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #545454;
+}
+
+.header__icons {
+  display: flex;
+  font-size: 10px;
+}
+
+.header__line {
+  height: 3px;
+  background-color: var(--tertiary);
+  width: 100%;
+}
+
+/* Title Bar */
+
+.title {
+  padding: 0px;
+  text-align: center;
+}
+
+.title__background {
+  height: 300px;
+  background-image: url("lib/mountains1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -20px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.title__headshot {
+  height: 120px;
+  width: 124px;
+  border: 3px solid var(--tertiary);
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  top: -60px;
+  background-color: white;
+  margin-bottom: -60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title__headshot > * {
+  height: 140px;
+  width: 140px;
+}
+
+.title__name {
+  font-size: 40px;
+  font-weight: 400;
+  height: 28px;
+  padding-bottom: 10px;
+  margin: 30px 0;
+  color: #545454;
+}
+
+.title__buttons > a > button {
+  border-color: var(--tertiary);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 3px;
+  background-color: var(--primary);
+  width: 150px;
+  height: 30px;
+  margin: 0px 5px;
+  font-weight: bold;
+  color: #707070;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title__buttons > a > button:hover {
+  filter: brightness(103%);
+}
+
+/* Second Section - About Me */
+
+.second-section {
+  padding: 22px 60px;
+}
+
+.second-section__columns {
+  margin: 20px 0;
+  column-count: 3;
+  column-gap: 40px;
+  column-fill: auto;
+  text-align: justify;
+}
+
+.second-section__columns > p {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  column-fill: auto;
+}
+
+/* Second Section - Card */
+
+.second-section__card {
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 1px 15px 5px;
+  width: 240px;
+  box-sizing: border-box;
+  margin: 0px auto;
+  color: #545454;
+  text-align: left;
+}
+
+.second-section__card-header {
+  text-indent: 0px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.second-section__card-list {
+  margin-top: 12px;
+  padding: 0 10px 0 15px;
+  font-size: 12px;
+}
+
+.second-section__card-list-item {
+  margin-bottom: 8px;
+  margin-left: 0px;
+}
+
+/* Third Section - Projects */
+
+.third-section {
+  padding: 22px 80px 15px 80px;
+}
+
+/* Component - Project */
+
+.project {
+  height: 200px;
+  border-radius: 5px;
+  display: flex;
+  margin: 25px 0px;
+}
+
+.project__image {
+  min-width: 280px;
+  background-color: var(--tertiary);
+  border-radius: 5px 0px 0px 5px;
+}
+
+.project__text {
+  padding: 30px;
+  flex: 1;
+  background-color: var(--primary);
+  border-radius: 0px 5px 5px 0px;
+}
+
+.project__header {
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--background);
+  padding: 3px 8px;
+  border-radius: 8px;
+  display: inline;
+  box-shadow: 0px 3px 3px 0px rgba(64, 63, 63, 0.08);
+  border-width: 2px;
+  border-color: var(--tertiary);
+  border-style: solid;
+}
+
+.project__description {
+  margin-top: 20px;
+  font-size: 14px;
+  height: 70px;
+}
+
+.project__external-link {
+  font-size: 14px;
+  display: flex;
+  margin-left: 5px;
+}
+
+.project__external-link-text {
+  margin: auto 0px auto -8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #545454;
+  text-decoration: none;
+}
+
+.project__external-link-text:hover {
+  color: #999;
+}
+
+/* Project Images */
+
+.quotify-screenshot {
+  background-image: url("lib/quotify-screenshot4.PNG");
+  background-size: cover;
+}
+
+.bwettig_static {
+  background-image: url("lib/mountains1.jpg");
+  background-size: cover;
+}
+
+.project-init {
+  background-image: url("lib/project-init-ss1.PNG");
+  background-size: cover;
+}
+
+.enlighten {
+  background-image: url("lib/enlighten-ss1.png");
+  background-size: cover;
+}
+
+/*  Footer Bar */
+
+footer {
+  text-align: center;
+  background-color: var(--secondary);
+}
+
+footer * {
+  color: var(--background);
+}
+
+.footer__underline {
+  background-color: var(--background);
+  margin-bottom: 16px;
+}
+
+.footer__bulletins {
+  display: flex;
+}
+
+.footer__bulletin {
+  flex: 1;
+  font-size: 12px;
+}
+
+.footer__bulletin-text {
+  display: inline;
+}
+
+/* Smaller Screens */
+
+@media only screen and (max-width: 1100px) {
+  .background::after {
+    background-image: none;
+    background-color: #efefed;
+  }
+}
